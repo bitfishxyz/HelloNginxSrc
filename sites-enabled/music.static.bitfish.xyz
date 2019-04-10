@@ -3,4 +3,4 @@ server {
     server_name music.static.bitfish.xyz;
     root /var/www/music.static.bitfish.xyz;
     index index.html;
-  }
+}

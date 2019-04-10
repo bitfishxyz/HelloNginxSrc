@@ -1,8 +1,8 @@
 server {
-  server_name api.mb.bitfish.xyz;
-  location / {
-   proxy_pass http://127.0.0.1:8081;
-  }
+    server_name api.mb.bitfish.xyz;
+    location / {
+      proxy_pass http://127.0.0.1:8081;
+    }
 
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/api.mb.bitfish.xyz/fullchain.pem; # managed by Certbot
@@ -16,10 +16,7 @@ server {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
-  listen 80;
-  server_name api.mb.bitfish.xyz;
+    listen 80;
+    server_name api.mb.bitfish.xyz;
     return 404; # managed by Certbot
-
-
 }
